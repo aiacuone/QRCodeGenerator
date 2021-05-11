@@ -8,6 +8,12 @@
   height: 100vh;
 }
 
+.continue{
+  background: white;
+  padding: 5px 50px;
+  cursor: pointer;
+}
+
 .main {
   padding: 5rem 0;
   flex: 1;
@@ -15,6 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .footer {
@@ -47,7 +54,8 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
+  color: white;
 }
 
 .title,
