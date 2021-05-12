@@ -1,56 +1,111 @@
-import React, { useState, useEffect } from 'react'
-import styles from '../styles/Generator.module.css'
+import React, { useState } from 'react'
+import styles from '../styles/Generator.module.scss'
+import Code from '../components/Code'
+import Head from 'next/head'
 
 export default function generator() {
-	const defaultInfo = {
-		firstName: '',
-		lastName: '',
-		dob: '',
-		phone: '',
-		email: '',
-	}
+	// const defaultInfo = {
+	// 	firstName: '',
+	// 	lastName: '',
+	// 	dob: '',
+	// 	number: '',
+	// 	email: '',
+	// 	time:''
+	// }
 
+	const defaultInfo = {
+		firstName: 'Adrian',
+		lastName: 'Iacuone',
+		dob: '1987-05-21',
+		number: '07393961334',
+		email: 'aiacuone@gmail.com',
+		time: Date.now(),
+	}
 	const [info, setInfo] = useState(defaultInfo)
+	const [generate, setGenerate] = useState(false)
 
 	function handleChange(input, value) {
-		let newInfo = { ...info }
+		setGenerate(false)
+		const newInfo = { ...info }
+		newInfo.time = Date.now()
 		newInfo[input] = value
 		setInfo(newInfo)
 	}
 
-	useEffect(() => {
-		console.log(info)
-	})
+	function handleGenerate(e) {
+		e.preventDefault()
+		setGenerate(true)
+	}
 
+	// console.log(info)
 	return (
 		<div className={styles.container}>
-			<form className={styles.form}>
-				<input
-					onChange={(e) => handleChange('firstName', e.target.value)}
-					type="text"
-					className={styles.input}
-				/>
-				<input
-					onChange={(e) => handleChange('lastName', e.target.value)}
-					type="text"
-					className={styles.input}
-				/>
-				<input
-					onChange={(e) => handleChange('dob', e.target.value)}
-					type="date"
-					className={styles.input}
-				/>
-				<input
-					onChange={(e) => handleChange('phone', e.target.value)}
-					type="number"
-					className={styles.input}
-				/>
-				<input
-					onChange={(e) => handleChange('email', e.target.value)}
-					type="email"
-					className={styles.input}
-				/>
-			</form>
+			<Head>
+				<title>QR Code Generator</title>
+			</Head>
+			<div className={styles.subContainer}>
+				<p className={styles.instructions}>
+					Generate your QR Code. All fields must be completed
+				</p>
+				<h1 className={styles.title}>GENERATOR</h1>
+				<form className={styles.form} onSubmit={handleGenerate}>
+					<label className={styles.label}>FIRST NAME</label>
+					<input
+						onChange={(e) => handleChange('firstName', e.target.value)}
+						type="text"
+						className={styles.input}
+						required
+						value={info.firstName}
+					/>
+					<label className={styles.label}></label>
+					LAST NAME
+					<input
+						onChange={(e) => handleChange('lastName', e.target.value)}
+						type="text"
+						className={styles.input}
+						required
+						value={info.lastName}
+					/>
+					<label className={styles.label}></label>
+					DATE OF BIRTH
+					<input
+						onChange={(e) => handleChange('dob', e.target.value)}
+						type="date"
+						className={styles.input}
+						required
+						value={info.dob}
+					/>
+					<label className={styles.label}></label>
+					MOBILE
+					<input
+						onChange={(e) => handleChange('number', e.target.value)}
+						type="tel"
+						className={styles.input}
+						required
+						value={info.number}
+						placeholder="07 000 000 000"
+						pattern="^0\s?7\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$"
+					/>
+					<label className={styles.label}></label>
+					EMAIL
+					<input
+						onChange={(e) => handleChange('email', e.target.value)}
+						type="email"
+						className={styles.input}
+						required
+						value={info.email}
+					/>
+					<div className={styles.buttonContainer}>
+						<button type="submit" className={styles.generate}>
+							Generate
+						</button>
+					</div>
+				</form>
+
+				<div className={styles.codeContainer}>
+					{generate && <Code info={info} />}
+				</div>
+			</div>
 		</div>
 	)
 }

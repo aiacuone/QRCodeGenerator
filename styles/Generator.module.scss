@@ -1,0 +1,84 @@
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.instructions {
+	position: absolute;
+	top: 0;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	justify-content: center;
+}
+
+.input {
+	margin: 10px 0;
+	width: 300px;
+	padding: 10px;
+	border-style: none;
+	background: rgb(255, 255, 255);
+	font-size: 1.1rem;
+	color: rgb(68, 68, 68);
+}
+
+.generate,
+.download {
+	text-align: center;
+	border-style: none;
+	margin: 30px 0 0 0;
+	font-size: 1rem;
+	cursor: pointer;
+	width: 100%;
+	background: #9cbfee;
+	padding: 5px 20px;
+}
+
+.subContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	position: relative;
+	padding: 50px 0;
+}
+
+.codeContainer {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+}
+
+.code {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.logo {
+	height: 90px;
+	position: absolute;
+	top: 70px;
+}
+
+.title{
+	position: absolute;
+	top: -60px;
+}
+
+.buttonContainer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
