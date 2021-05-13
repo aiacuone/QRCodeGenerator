@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from '../styles/Generator.module.scss'
-import Code from '../components/Code.js'
+import Code from '../components/Code'
 import Head from 'next/head'
 
 export default function generator() {
