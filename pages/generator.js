@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../styles/Generator.module.scss'
+import styles from '../styles/Generator.module.css'
 import Code from '../components/Code'
 import Head from 'next/head'
 

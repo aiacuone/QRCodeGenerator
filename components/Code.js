@@ -1,15 +1,15 @@
 import React from 'react'
-import styles from '../styles/Generator.module.scss'
-import QRCode from "react-qr-code";
+import styles from '../styles/Generator.module.css'
+var QRCode = require('qrcode.react');
 
 export default function Code({ info }) {
 	let text = `Hello ${info.firstName}, 
-	The date you generated the QR Code was ${timeStampDate()}, the time you generated the QR Code was ${timeStampTime()}. The information you submitted is as follows:
+	The date you generated this QR Code was ${timeStampDate()}, the time you generated this QR Code was ${timeStampTime()}. The information you submitted is as follows:
 	Name: ${info.firstName} ${info.lastName}
 	Date of Birth: ${info.dob}
 	Email: ${info.email}
 	Number: ${info.number}
-Thank you for using my QR Code Generator. All my information and projects can be accessed via the links located within the header of the application. Im very greatful for the opportunity and look forward to your response`
+Thank you for using my QR Code Generator. All my information and projects can be accessed via the links located within the header of my application. Im very greatful for the opportunity and look forward to your response`
 
 	function handleDownload() {
 		const canvas = document.getElementById('code')
