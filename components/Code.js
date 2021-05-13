@@ -8,8 +8,8 @@ export default function Code({ info }) {
 	Name: ${info.firstName} ${info.lastName}
 	Date of Birth: ${info.dob}
 	Email: ${info.email}
-	Number: ${info.number}
-Thank you for using my QR Code Generator. All my information and projects can be accessed via the links located within the header of my application. Im very greatful for the opportunity and look forward to your response`
+	Mobile: ${info.number}
+Thank you for using my QR Code Generator. All my information and projects can be accessed via the links located within the header of my application. Im very greatful for the opportunity and look forward to hearing from you.`
 
 	function handleDownload() {
 		const canvas = document.getElementById('code')
