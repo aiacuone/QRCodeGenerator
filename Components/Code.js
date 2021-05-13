@@ -1,6 +1,7 @@
 import React from 'react'
+var QRCode = require('qrcode.react')
 import styles from '../styles/Generator.module.scss'
-import QRCode from 'qrcode.react'
+// import QRCode from 'qrcode.react'
 
 export default function Code({ info }) {
 	let text = `Hello ${info.firstName}, 
