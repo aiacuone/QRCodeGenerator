@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Link from 'next/link.js'
 import logo from '../images/logo.svg'
 
 export default function Home() {
