@@ -29,7 +29,7 @@ export default function Header() {
 
 				<li className={styles.list}>
 					<a href="https://www.linkedin.com/in/adrian-iacuone/" target="_blank">
-						Linkedin
+						LinkedIn
 						<img src={linkedin} className={styles.icon} />
 					</a>
 				</li>
