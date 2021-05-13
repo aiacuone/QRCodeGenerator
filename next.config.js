@@ -1,5 +1,6 @@
-const withImages = require('next-images')
+// const withImages = require('next-images')
 module.exports = {
-	withImages: withImages(),
+	// withImages: withImages(),
+	withImages: require('next-images'),
 	distDir: 'out',
 }
