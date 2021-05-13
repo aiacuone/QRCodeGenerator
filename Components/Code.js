@@ -1,5 +1,5 @@
 import React from 'react'
-var QRCode = require('qrcode.react')
+// var QRCode = require('qrcode.react')
 import styles from '../styles/Generator.module.scss'
 // import QRCode from 'qrcode.react'
 
@@ -47,7 +47,7 @@ Thank you for using my QR Code Generator. All my information and projects can be
 
 	return (
 		<div className={styles.code}>
-			<QRCode value={text} id="code" size={280} />
+			{/* <QRCode value={text} id="code" size={280} /> */}
 			<button className={styles.download} onClick={handleDownload}>
 				Download
 			</button>
