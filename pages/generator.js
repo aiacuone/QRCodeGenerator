@@ -75,7 +75,7 @@ export default function generator() {
 						required
 						value={info.number}
 						placeholder="07 000 000 000"
-						pattern="^0\s?7\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$"
+						pattern="^([+]447|07)\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$"
 					/>
 					<label className={styles.label}></label>
 					EMAIL
