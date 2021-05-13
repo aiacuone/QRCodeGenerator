@@ -1,10 +1,10 @@
 import '../styles/globals.css'
-import Header from '../components/Header'
+// import Header from '../components/Header'
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<div className="home">
-			<Header />
+			{/* <Header /> */}
 			<Component {...pageProps} />
 		</div>
 	)
