@@ -4,7 +4,7 @@ import styles from '../styles/Generator.module.scss'
 
 export default function Code({ info }) {
 	let text = `Hello ${info.firstName}, 
-	The date you generated the QR Code was ${timeStampDate()}, the time you generated the QR Code was ${timeStampTime()}. The information you inputed is as follows:
+	The date you generated the QR Code was ${timeStampDate()}, the time you generated the QR Code was ${timeStampTime()}. The information you submitted is as follows:
 	Name: ${info.firstName} ${info.lastName}
 	Date of Birth: ${info.dob}
 	Email: ${info.email}
@@ -27,10 +27,11 @@ Thank you for using my QR Code Generator. All my information and projects can be
 	function timeStampDate() {
 		let dateObj = new Date(info.time)
 
+		let day = dateObj.getDate()
 		let month = dateObj.getMonth() + 1
 		let year = dateObj.getFullYear()
-		let date = dateObj.getDate()
-		return `${date}/${month}/${year}`
+
+		return `${day}/${month}/${year}`
 	}
 
 	function timeStampTime() {
@@ -39,10 +40,10 @@ Thank you for using my QR Code Generator. All my information and projects can be
 		let hours = dateObj.getHours()
 		let minutes = dateObj.getMinutes()
 		let seconds = dateObj.getSeconds()
+
 		return `${hours}:${minutes}:${seconds}`
 	}
 
-	console.log(text)
 	return (
 		<div className={styles.code}>
 			<QRCode value={text} id="code" size={280} />

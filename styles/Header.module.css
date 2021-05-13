@@ -9,8 +9,9 @@
 	overflow: hidden;
 	white-space: nowrap;
 	padding: 10px 0;
-	background: #4b6990;
 	background: #415a7a;
+	z-index: 1;
+
 }
 
 .list {

@@ -7,6 +7,8 @@ body {
 	background: #6e9dda;
 	height: 100vh;
 	width: 100vw;
+	min-height: 800px;
+	overflow: hidden;
 }
 
 a {

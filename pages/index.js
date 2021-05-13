@@ -17,7 +17,6 @@ export default function Home() {
 						Welcome to my QR Code Generator. This project is to demonstrate the
 						ability to generate a QR Code, using Next JS.
 					</p>
-					{/* <p>test</p> */}
 					<Link href="/generator">
 						<p className={styles.continue}>CONTINUE</p>
 					</Link>

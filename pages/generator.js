@@ -4,23 +4,15 @@ import Code from '../components/Code'
 import Head from 'next/head'
 
 export default function generator() {
-	// const defaultInfo = {
-	// 	firstName: '',
-	// 	lastName: '',
-	// 	dob: '',
-	// 	number: '',
-	// 	email: '',
-	// 	time:''
-	// }
-
 	const defaultInfo = {
-		firstName: 'Adrian',
-		lastName: 'Iacuone',
-		dob: '1987-05-21',
-		number: '07393961334',
-		email: 'aiacuone@gmail.com',
-		time: Date.now(),
+		firstName: '',
+		lastName: '',
+		dob: '',
+		number: '',
+		email: '',
+		time:''
 	}
+
 	const [info, setInfo] = useState(defaultInfo)
 	const [generate, setGenerate] = useState(false)
 
@@ -37,7 +29,6 @@ export default function generator() {
 		setGenerate(true)
 	}
 
-	// console.log(info)
 	return (
 		<div className={styles.container}>
 			<Head>
